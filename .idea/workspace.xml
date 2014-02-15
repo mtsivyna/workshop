@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b1fd4b8-8331-4922-95ba-63c4ba96921d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="newproject.iws" />
@@ -10,7 +10,7 @@
     <file path="$PROJECT_DIR$/src/test/java/workShop/steps/EndUserSteps.java" changelist="8b1fd4b8-8331-4922-95ba-63c4ba96921d" time="1392453154177" ignored="false" />
     <file path="D:/netpulse_project/netpulse-acceptance-tests/ui-acceptance-tests/src/main/java/com/netpulse/pages/WorkoutsPage.java" changelist="8b1fd4b8-8331-4922-95ba-63c4ba96921d" time="1392457344597" ignored="false" />
     <file path="/WorkoutsPage.java" changelist="8b1fd4b8-8331-4922-95ba-63c4ba96921d" time="1392456321884" ignored="false" />
-    <file path="/Dummy.txt" changelist="8b1fd4b8-8331-4922-95ba-63c4ba96921d" time="1392464806227" ignored="false" />
+    <file path="/Dummy.txt" changelist="8b1fd4b8-8331-4922-95ba-63c4ba96921d" time="1392464936286" ignored="false" />
     <file path="/FirstTest.java" changelist="8b1fd4b8-8331-4922-95ba-63c4ba96921d" time="1392464090525" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +91,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="4" column="6" selection-start="33" selection-end="33" vertical-scroll-proportion="0.19263457">
               <folding />
             </state>
           </provider>
@@ -120,6 +120,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/.gitignore" />
         <option value="$PROJECT_DIR$/src/test/java/com/workshop/FirstTest.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -338,7 +339,11 @@
       <created>1392464789452</created>
       <updated>1392464789452</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary=" commit">
+      <created>1392464939222</created>
+      <updated>1392464939222</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -480,7 +485,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="4" column="6" selection-start="33" selection-end="33" vertical-scroll-proportion="0.19263457">
           <folding />
         </state>
       </provider>
