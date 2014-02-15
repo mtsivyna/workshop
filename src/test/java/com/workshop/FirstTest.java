@@ -8,7 +8,7 @@ package com.workshop;
  * To change this template use File | Settings | File Templates.
  */
 public class FirstTest {
-    public static void method (){
+    public static void someMethod (){
 
     }
 }
