@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b1fd4b8-8331-4922-95ba-63c4ba96921d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="newproject.iws" />
@@ -9,7 +10,7 @@
     <file path="$PROJECT_DIR$/src/test/java/workShop/steps/EndUserSteps.java" changelist="8b1fd4b8-8331-4922-95ba-63c4ba96921d" time="1392453154177" ignored="false" />
     <file path="D:/netpulse_project/netpulse-acceptance-tests/ui-acceptance-tests/src/main/java/com/netpulse/pages/WorkoutsPage.java" changelist="8b1fd4b8-8331-4922-95ba-63c4ba96921d" time="1392457344597" ignored="false" />
     <file path="/WorkoutsPage.java" changelist="8b1fd4b8-8331-4922-95ba-63c4ba96921d" time="1392456321884" ignored="false" />
-    <file path="/Dummy.txt" changelist="8b1fd4b8-8331-4922-95ba-63c4ba96921d" time="1392464625336" ignored="false" />
+    <file path="/Dummy.txt" changelist="8b1fd4b8-8331-4922-95ba-63c4ba96921d" time="1392464806227" ignored="false" />
     <file path="/FirstTest.java" changelist="8b1fd4b8-8331-4922-95ba-63c4ba96921d" time="1392464090525" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,10 +79,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FirstTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FirstTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/workshop/FirstTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="64" selection-start="175" selection-end="175" vertical-scroll-proportion="0.3371105">
+            <state line="6" column="26" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -324,7 +334,11 @@
       <created>1392464632340</created>
       <updated>1392464632340</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=" commit">
+      <created>1392464789452</created>
+      <updated>1392464789452</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -450,9 +464,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="57" selection-start="1227" selection-end="1227" vertical-scroll-proportion="-9.1">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/workshop/FirstTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="64" selection-start="175" selection-end="175" vertical-scroll-proportion="0.3371105">
+        <state line="6" column="26" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
