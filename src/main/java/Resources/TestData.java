@@ -9,6 +9,7 @@ package Resources;
  */
 public abstract class TestData {
 
-    public static String PRODUCT_NAME = "New Product";
-    public static String PRODUCT_DIR = "newDir";
+    public static final String PRODUCT_NAME = "New Product";
+    public static final String PRODUCT_DIR = "newDir";
+    public static final String NEW_PRODUCT_NAME = "New Edited Product";
 }

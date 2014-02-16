@@ -49,4 +49,14 @@ public class ElementsSelectors {
 
         return $(".btn.btn-primary");
     }
+
+    public static SelenideElement editProductButton() {
+
+        return $("#productMenu .edit");
+    }
+
+    public static SelenideElement dialogSaveButton() {
+
+        return $("#dialog-btn-edit-product");
+    }
 }

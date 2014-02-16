@@ -1,9 +1,11 @@
 package com.workshop;
 
 import Resources.TestData;
+import org.junit.Before;
 import org.junit.Test;
 import workShop.pages.General;
-import workShop.pages.HomePage;
+
+import static workShop.pages.HomePage.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,15 +16,19 @@ import workShop.pages.HomePage;
  */
 public class CreateNewProductTest {
 
-
-    @Test
-    public void createNewProduct()
-
-    {
+    @Before
+    public void openWindow() {
 
         General.openHomePage();
-        HomePage.addNewProduct(TestData.PRODUCT_NAME, TestData.PRODUCT_DIR);
-
-
     }
+
+    @Test
+    public void createNewProduct() {
+
+
+        General.checkProductWithSameName(TestData.PRODUCT_NAME, TestData.NEW_PRODUCT_NAME);
+        removeDirectoryIfExist(TestData.PRODUCT_DIR);
+        addNewProduct(TestData.PRODUCT_NAME, TestData.PRODUCT_DIR);
+    }
+
 }

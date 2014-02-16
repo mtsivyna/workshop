@@ -1,13 +1,13 @@
 package workShop
 
-import static com.codeborne.selenide.Condition.appear
-import Resources.TestData
 
+import Resources.TestData
+import workShop.pages.General
+import workShop.pages.HomePage
+
+import static Elements.ElementsSelectors.*
 import static com.codeborne.selenide.Condition.exactText
 import static com.codeborne.selenide.Condition.visible
-import static com.codeborne.selenide.Selenide.$
-import static com.codeborne.selenide.Selenide.$$
-import static com.codeborne.selenide.Selenide.open
 import static core.ConditionHelpers.be
 
 description "Adding new product functionality"
@@ -16,27 +16,27 @@ scenario "Add some product", {
 
     given "go to home page", {
 
-        open("http://localhost:8123/");
+        General.openHomePage();
     }
-    and "product isn't exist", {
+    and "delete product if it exist", {
 
+        General.checkProductWithSameName(TestData.PRODUCT_NAME, TestData.NEW_PRODUCT_NAME);
     }
-    when "click on create button", {
-        $("#btn-add-product").isDisplayed();
-        $("#btn-add-product").click();
-        $(".product-name").setValue(TestData.PRODUCT_NAME);
-        $(".product-path").setValue(TestData.PRODUCT_DIR);
-        $("#dialog-btn-add-product").click();
+    when "create new product", {
+
+        HomePage.addNewProduct(TestData.PRODUCT_NAME, TestData.PRODUCT_DIR);
     }
     then "new product added", {
 
-        $$(".table-cell>a").findBy(exactText(TestData.PRODUCT_NAME)).should(be(visible));
+        createdProductList().findBy(exactText(TestData.PRODUCT_NAME)).should(be(visible));
     }
-    and "remove just added product", {
+    when "edit just created product", {
 
+        HomePage.editCurrentProduct(TestData.PRODUCT_NAME, TestData.NEW_PRODUCT_NAME);
+    }
 
-        $$(".table-cell>a").findBy(exactText(TestData.PRODUCT_NAME)).contextClick();
-        $("#productMenu .delete").click();
-        $(".btn.btn-primary").click();
+    then "edited product has been created", {
+
+        createdProductList().findBy(exactText(TestData.NEW_PRODUCT_NAME)).should(be(visible));
     }
 }
