@@ -7,5 +7,8 @@ package Resources;
  * Time: 5:24 PM
  * To change this template use File | Settings | File Templates.
  */
-public class TestData {
+public abstract class TestData {
+
+    public static String PRODUCT_NAME = "New Product";
+    public static String PRODUCT_DIR = "newDir";
 }

@@ -1,5 +1,7 @@
 package workShop.pages;
 
+import static com.codeborne.selenide.Selenide.*;
+
 /**
  * Created with IntelliJ IDEA.
  * User: mtsivyna
@@ -8,4 +10,11 @@ package workShop.pages;
  * To change this template use File | Settings | File Templates.
  */
 public class General {
+
+
+    public static void openHomePage(){
+
+        open("http://localhost:8123/");
+    }
+
 }
