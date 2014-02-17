@@ -1,7 +1,5 @@
 package workShop.pages;
 
-import static Elements.ElementsSelectors.*;
-import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Selenide.open;
 
 /**
@@ -19,26 +17,4 @@ public class General {
         open("http://localhost:8123/");
     }
 
-    public static void checkProductWithSameName(String name, String editedName) {
-
-        if (createdProductList().findBy(exactText(name)).isDisplayed()){
-
-            createdProductList().findBy(exactText(name)).contextClick();
-            deleteProductButton().click();
-            dialogAcceptButton().click();
-
-
-        }
-        if (createdProductList().findBy(exactText(editedName)).isDisplayed()){
-
-            createdProductList().findBy(exactText(editedName)).contextClick();
-            deleteProductButton().click();
-            dialogAcceptButton().click();
-        }
-
-        else {
-
-            return;
-        }
-    }
 }

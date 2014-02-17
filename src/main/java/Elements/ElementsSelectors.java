@@ -1,10 +1,8 @@
 package Elements;
 
-import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,6 +11,8 @@ import static com.codeborne.selenide.Selenide.$$;
  * Time: 12:32 PM
  * To change this template use File | Settings | File Templates.
  */
+
+//TODO: refactor: restructure among real Page and Widget/Components classes
 public class ElementsSelectors {
 
     public static SelenideElement addProductButton() {
@@ -33,11 +33,6 @@ public class ElementsSelectors {
     public static SelenideElement createProductButton() {
 
         return $("#dialog-btn-add-product");
-    }
-
-    public static ElementsCollection createdProductList() {
-
-        return $$(".table-cell>a");
     }
 
     public static SelenideElement deleteProductButton() {

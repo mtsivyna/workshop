@@ -13,17 +13,19 @@ import workShop.pages.HomePage;
  * Time: 2:38 PM
  * To change this template use File | Settings | File Templates.
  */
+//TODO refactor methods names
 public class EditCreatedProductTest {
 
     @Before
-    public void openWindow() {
+    public void setupOnTheHomePageWithProduct() {
 
         General.openHomePage();
+
     }
 
     @Test
     public void editCreatedProductTest() {
 
-    HomePage.editCurrentProduct(TestData.PRODUCT_NAME, TestData.NEW_PRODUCT_NAME);
+        HomePage.editCurrentProduct(TestData.PRODUCT_NAME, TestData.NEW_PRODUCT_NAME);
     }
 }

@@ -17,17 +17,17 @@ import static workShop.pages.HomePage.*;
 public class CreateNewProductTest {
 
     @Before
-    public void openWindow() {
+    public void givenHomePageIsOpened() {
 
         General.openHomePage();
     }
 
     @Test
-    public void createNewProduct() {
+    public void testProductCanBeAdded() {
 
-
-        General.checkProductWithSameName(TestData.PRODUCT_NAME, TestData.NEW_PRODUCT_NAME);
+        deletesProductsIfExist(TestData.PRODUCT_NAME, TestData.NEW_PRODUCT_NAME); //TODO: refactor to delete only PRODUCT_NAME
         removeDirectoryIfExist(TestData.PRODUCT_DIR);
+
         addNewProduct(TestData.PRODUCT_NAME, TestData.PRODUCT_DIR);
     }
 

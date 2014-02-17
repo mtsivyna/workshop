@@ -4,6 +4,7 @@ package workShop
 import Resources.TestData
 import workShop.pages.General
 import workShop.pages.HomePage
+import workShop.widgets.Table
 
 import static Elements.ElementsSelectors.*
 import static com.codeborne.selenide.Condition.exactText
@@ -20,7 +21,7 @@ scenario "Add some product", {
     }
     and "delete product if it exist", {
 
-        General.checkProductWithSameName(TestData.PRODUCT_NAME, TestData.NEW_PRODUCT_NAME);
+        HomePage.deletesProductsIfExist(TestData.PRODUCT_NAME, TestData.NEW_PRODUCT_NAME);
     }
     when "create new product", {
 
@@ -28,7 +29,7 @@ scenario "Add some product", {
     }
     then "new product added", {
 
-        createdProductList().findBy(exactText(TestData.PRODUCT_NAME)).should(be(visible));
+        Table.cells().findBy(exactText(TestData.PRODUCT_NAME)).should(be(visible));
     }
     when "edit just created product", {
 
@@ -37,6 +38,6 @@ scenario "Add some product", {
 
     then "edited product has been created", {
 
-        createdProductList().findBy(exactText(TestData.NEW_PRODUCT_NAME)).should(be(visible));
+        Table.cells().findBy(exactText(TestData.NEW_PRODUCT_NAME)).should(be(visible));
     }
 }

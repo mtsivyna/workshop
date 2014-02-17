@@ -2,6 +2,7 @@ package workShop.pages;
 
 
 import org.apache.commons.io.FileUtils;
+import workShop.widgets.Table;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,26 +22,25 @@ import static core.ConditionHelpers.be;
  */
 public class HomePage {
 
-    public static void addNewProduct(String productName, String path) {
+    public static void addNewProduct(String productName, String productPath) {
 
-        addProductButton().isDisplayed();
         addProductButton().click();
         productNameInput().setValue(productName);
-        productPathInput().setValue(path);
+        productPathInput().setValue(productPath);
         createProductButton().click();
         dialogAcceptButton().click();
-        createdProductList().findBy(exactText(productName)).should(be(visible));
-
+        Table.cellByText(productName).should(be(visible));
     }
 
     public static void editCurrentProduct(String productName, String newProductName) {
 
-        createdProductList().findBy(exactText(productName)).contextClick();
+        Table.cellByText(newProductName).contextClick();
         editProductButton().click();
-        productNameInput().clear();
+//        ContextMenu.editItem().click();
+//        ContextMenu.edit();
         productNameInput().setValue(newProductName);
         dialogSaveButton().click();
-        createdProductList().findBy(exactText(newProductName)).should(be(visible));
+        Table.cellByText(newProductName).should(be(visible));
     }
 
     public static void removeDirectoryIfExist(String path) {
@@ -50,6 +50,28 @@ public class HomePage {
                 FileUtils.deleteDirectory(directory);
             } catch (IOException e) {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+
+    //TODO: refactor to use varargs
+    public static void deletesProductsIfExist(String name, String editedName) {
+
+        if (Table.cells().findBy(exactText(name)).isDisplayed()){
+
+            Table.cells().findBy(exactText(name)).contextClick();
+            deleteProductButton().click();
+            dialogAcceptButton().click();
+        }
+        if (Table.cells().findBy(exactText(editedName)).isDisplayed()){
+
+            Table.cells().findBy(exactText(editedName)).contextClick();
+            deleteProductButton().click();
+            dialogAcceptButton().click();
+        }
+
+        else {
+
+            return;
         }
     }
 }
